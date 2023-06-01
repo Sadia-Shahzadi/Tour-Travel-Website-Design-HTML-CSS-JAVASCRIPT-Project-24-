@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour & Travel Website Design Using HTML / CSS / JAVASCRIPT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <section class="navbar">
+      <h1><span>T</span>RAVEL</h1>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#book">book</a></li>
+        <li><a href="#packages">packages</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#gallery">gallery</a></li>
+        <li><a href="#review">review</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <div class="icons">
+        <i class="fa fa-user" id="user"></i>
+        <i class="fa fa-search" id="search"></i>
+      </div>
+    </section>
+
+    <!-- Form Container -->
+    <form class="searchbar">
+      <input type="search" id="search-bar" placeholder="Search Here...." />
+      <label for="search-bar" class="fa fa-search"></label>
+    </form>
+
+    <!-- Login Container -->
+    <form class="login">
+      <h1>LOGIN</h1>
+      <input type="email" placeholder="Enter Your Email" /> <br />
+      <input type="password" placeholder="Enter Your Password" /> <br />
+      <br />
+      <a href="#" class="button">Login Now</a> <br />
+      <br />
+      <a href="#" class="button btn">Sign Up</a> <br />
+      <div class="flex">
+        <h5>Forget Password? <span>Click Here</span></h5>
+        <h5>Don't Have An Account? <span>Register Now</span></h5>
+      </div>
+    </form>
+
+    <!-- Home Section  -->
+    <section class="container" id="home">
+      <div class="slide-container active">
+        <div class="slide">
+          <div class="content">
+            <h1>ADVENTURE IS WORTHWHILE</h1>
+            <h3>Discover New Places With Us, Adventure Awaits</h3>
+            <a href="#" class="button"> Discover More</a>
+          </div>
+          <video src="img/video1" autoplay muted loop></video>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <h1>ADVENTURE IS WORTHWHILE</h1>
+            <h3>Discover New Places With Us, Adventure Awaits</h3>
+            <a href="#" class="button"> Discover More</a>
+          </div>
+          <video src="img/video2.crdownload" autoplay muted loop></video>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <h1>ADVENTURE IS WORTHWHILE</h1>
+            <h3>Discover New Places With Us, Adventure Awaits</h3>
+            <a href="#" class="button"> Discover More</a>
+          </div>
+          <video src="img/video3.crdownload" autoplay muted loop></video>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <h1>ADVENTURE IS WORTHWHILE</h1>
+            <h3>Discover New Places With Us, Adventure Awaits</h3>
+            <a href="#" class="button"> Discover More</a>
+          </div>
+          <video src="img/video4.crdownload" autoplay muted loop></video>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <h1>ADVENTURE IS WORTHWHILE</h1>
+            <h3>Discover New Places With Us, Adventure Awaits</h3>
+            <a href="#" class="button"> Discover More</a>
+          </div>
+          <video src="img/video5.crdownload" autoplay muted loop></video>
+        </div>
+      </div>
+
+      <div class="next" onclick="next()"><</div>
+      <div class="previous" onclick="previous()">></div>
+    </section>
+
+    <!-- Book Section  -->
+    <div class="text" id="book">
+      <span>B</span><span>O</span><span>O</span><span>K</span> <span>N</span
+      ><span>O</span><span>W</span>
+    </div>
+    <section class="book">
+      <div class="one-side">
+        <img src="img/book-image.avif" alt="book-image" />
+      </div>
+      <div class="other-side">
+        <form>
+          <h1>Where To</h1>
+          <select>
+            <option>Turkey</option>
+            <option>America</option>
+            <option>Pakistan</option>
+            <option>Austrailia</option>
+            <option>Canada</option>
+            <option>Benzene</option>
+            <option>India</option>
+          </select>
+          <h1>How Many</h1>
+          <input type="number" placeholder="Number Of Guests" />
+          <h1>Arrivals</h1>
+          <input type="date" />
+          <h1>Leaving</h1>
+          <input type="date" /> <br />
+          <br />
+          <br />
+          <a href="#" class="btn">Book Now</a>
+        </form>
+      </div>
+    </section>
+
+    <!-- Packages Section  -->
+    <div class="text" id="packages">
+      <span>P</span><span>A</span><span>C</span><span>K</span><span>A</span
+      ><span>G</span><span>E</span><span>S</span>
+    </div>
+    <section class="packages">
+      <div class="p1">
+        <img src="img/p6.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> Pakistan</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="p1">
+        <img src="img/p2.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> Austrailia</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="p1">
+        <img src="img/p3.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> Sydney</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </section>
+
+    <section class="packages">
+      <div class="p1">
+        <img src="img/p4.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> Paris</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="p1">
+        <img src="img/p5.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> Huwaii</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="p1">
+        <img src="img/p6.avif" alt="image" />
+        <h3><i class="fa fa-map-marker"></i> London</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <h4>$90.00 <span>$120.00</span></h4>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Services Section  -->
+    <div class="text" id="services">
+      <span>S</span><span>E</span><span>R</span><span>V</span><span>I</span
+      ><span>C</span><span>E</span><span>S</span>
+    </div>
+
+    <section class="services">
+      <div class="p1">
+        <i class="fa fa-university"></i>
+        <h1>Affordable Hostels</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+
+      <div class="p1">
+        <i class="fa fa-cutlery"></i>
+        <h1>Food And Drinks</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+
+      <div class="p1">
+        <i class="fa fa-bell"></i>
+        <h1>Safety Guide</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="p1">
+        <i class="fa fa-globe"></i>
+        <h1>Around The World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+
+      <div class="p1">
+        <i class="fa fa-plane"></i>
+        <h1>Fastest Travel</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+
+      <div class="p1">
+        <i class="fa fa-deaf"></i>
+        <h1>Adventure</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section  -->
+    <div class="text" id="gallery">
+      <span>G</span><span>A</span><span>L</span><span>L</span><span>E</span
+      ><span>R</span><span>Y</span>
+    </div>
+    <section class="gallery">
+      <div class="g1">
+        <img src="img/g1.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g2.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g3.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="g1">
+        <img src="img/g4.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g5.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g6.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="g1">
+        <img src="img/p3.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g8.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <div class="g1">
+        <img src="img/g9.avif" alt="images" />
+        <div class="head">
+          <h1>Amazing Places</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            repellendus nemo vel aperiam. Animi porro excepturi consequuntur
+            illum dolorum deserunt,
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Section  -->
+    <div class="text" id="review">
+      <span>R</span><span>E</span><span>V</span><span>I</span><span>E</span
+      ><span>W</span>
+    </div>
+
+    <section class="review">
+      <div class="p1">
+        <img src="img/testimonial3.jpg" alt="image" />
+        <h1>John Doe</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+      </div>
+
+      <div class="p1">
+        <img src="img/testimonial4.jpg" alt="image" />
+        <h1>Jimmy Artsy</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+      </div>
+
+      <div class="p1">
+        <img src="img/testimonial6.jpg" alt="image" />
+        <h1>Jess Mark</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          repellendus nemo vel aperiam. Animi porro excepturi consequuntur illum
+          dolorum deserunt,
+        </p>
+        <div class="icon">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section  -->
+    <div class="text" id="contact">
+      <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span
+      ><span>C</span><span>T</span>
+    </div>
+    <section class="book">
+      <div class="one-side">
+        <img src="img/contact image.avif" alt="contact-image" />
+      </div>
+      <div class="other-side">
+        <form>
+          <h1>Name</h1>
+          <input type="text" placeholder="Enter Your Name" />
+          <h1>Email</h1>
+          <input type="email" placeholder="Enter Your Email" />
+          <h1>Phone No.</h1>
+          <input type="text" placeholder="Enter Your Phone Number" />
+          <h1>Gender</h1>
+          <select>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <br />
+          <br />
+          <a href="#" class="btn">Send Message</a>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <section class="footer">
+      <div class="d1">
+        <h1><span>T</span>RAVEL</h1>
+        <p>
+          Vivamus convallis fermen sollicitudin et, <br />
+          vitae elit in vel ultrices sed in urna ipsum <br />
+          ullamcorper auctor.
+        </p>
+        <div class="icons">
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+        </div>
+      </div>
+      <div class="d1">
+        <h1>About Us</h1>
+        <a href="#">Our Story</a>
+        <a href="#">Our Locations</a>
+        <a href="#">Current Deals</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="d1">
+        <h1>Our Locations</h1>
+        <a href="#">Pakistan</a>
+        <a href="#">Turkey</a>
+        <a href="#">Canada</a>
+        <a href="#">Itly</a>
+        <a href="#">Egypt</a>
+        <a href="#">America</a>
+      </div>
+      <div class="d1">
+        <h1>Quick Links</h1>
+        <a href="#home">Home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </div>
+    </section>
+    <section class="copyright">
+      <h1>
+        Copyright © 2023 The Travel ✈️✈️ Website Design || Prepared by Ms. Web
+        Developer 💖💖
+      </h1>
+    </section>
+    <script src="script.js"></script>
+
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true,
+      });
+    </script>
+  </body>
+</html>

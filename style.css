@@ -1,0 +1,515 @@
+/* CDN LINK  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none; 
+    outline: none;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/* Navbar Section  */
+.navbar{
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: 0;
+}
+.navbar h1{
+    font-size: 28px;
+    font-weight: 800;
+}
+.navbar h1 span{
+    color: darkorange;
+}
+.navbar ul{
+    text-align: center;
+    flex: 1;
+}
+.navbar ul li{
+    display: inline-block;
+    padding: 6px 20px;
+}
+.navbar ul li a{
+    font-size: 18px;
+    color: white;
+}
+.navbar ul li a:hover, .icons i:hover{
+    color: darkorange;
+    transition: 0.5s;
+}
+.navbar ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: .3s;
+    background-color: white;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+.icons{
+    padding: 6px;
+    margin-right: 7%;
+    cursor: pointer;
+}
+.icons i{
+    padding: 0 10px;
+    font-size: 22px;
+}
+
+/* Search Container  */
+.searchbar{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgb(54, 53, 53);
+    height: 10vh;
+    margin-top: 0px;
+    display: flex;
+    clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+}
+.searchbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
+    transition: 1s;
+}
+.searchbar input{
+    width: 120%;
+    margin: 10px 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-right: 20px;
+    color: darkorange;
+}
+.searchbar label{
+    cursor: pointer;
+    font-size: 28px;
+    padding-top: 15px;
+    padding-right: 30px;
+    color: white;
+}
+.searchbar label:hover{
+    color: darkorange;
+    transition: .3s;
+}
+
+/* Login Container  */
+.login{
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(54, 53, 53);
+    margin: 1% 34%;
+    min-height: 70vh; 
+    width: 30%;
+    border-radius: 5px; 
+    clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+}
+.login.active{
+    clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
+    transition: 1s;
+}
+.login h1{
+    text-align: center;
+    font-size: 40px;
+    color: darkorange;
+    font-weight: 500;
+    padding-top: 20px;
+}
+.login input{
+    margin: 10px 20px;
+    min-width: 85%;
+    padding: 10px 10px;
+}
+.button{
+    background-color: darkorange;
+    color: white;
+    padding: 10px 9.6rem;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.login .button{
+    padding: 10px 8.7rem;
+    margin-right: 10px;
+}
+.login .btn{
+    padding: 10px 9.3rem;
+    margin-top: 20px;
+}
+.button:hover{
+    background-color: white;
+    color: darkorange;
+    transition: .4s;
+    font-weight: 600;
+}
+.login .flex{
+    padding-top: 50px;
+    margin-left: 22px;
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+}
+.login .flex h5{
+    padding-bottom: 10px;
+}
+.login .flex h5 span{
+    color: darkorange;
+    cursor: pointer;
+}
+
+/* Slider Section  */
+.container{
+    position: relative;
+}
+.slide{
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+.content{
+    text-align: center;
+    margin: 20% 0;
+    color: white;
+}
+.content h1{
+    font-size: 60px;
+    animation: animate .4s linear .4s backwards;
+}
+.content h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: animate .4s linear .4s backwards;
+}
+.content .button{
+    padding: 10px 25px;
+    animation: animate .4s linear .4s backwards;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(.2) translateY(-50px);
+    }
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: fadeIn .4s linear;
+}
+@keyframes fadeIn{
+    0%{
+        transform: scale(1.5);
+    }
+}
+.slide-container{
+    display: none;
+}
+.slide-container.active{
+    display: block;
+}
+
+.next,.previous{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background-color: white;
+    color: #333;
+    height: 60px;width: 50px;
+    line-height: 55px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+.next{
+    right: 0;
+}
+
+/* Book Section  */
+.text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.text span{
+    padding: 2px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    margin-left: 5px;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+.text span:hover{
+    background-color: orangered;
+}
+.book{
+    display: flex;
+    height: 110vh;
+    padding-top: 50px;
+
+}
+.one-side{
+    margin-top: 5%;
+}
+.one-side img{
+    margin-left: 90px;
+     min-height: 85vh;
+    max-width: 70%;  
+}
+.other-side{
+    margin-top: 80px;
+    margin-right: 38%;
+    margin-left: 50px;
+}
+.other-side h1{
+    font-size: 26px;
+    margin: 5px 10px;
+}
+.other-side input{
+    margin: 10px 0px;
+    min-width: 295%;
+    padding: 10px 10px;
+    border: 1px solid wheat;
+}
+select{
+    margin: 10px 0px;
+    min-width: 305%;
+    padding: 10px 10px;
+    border: 1px solid wheat;
+}
+ .btn{
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: 2px;
+}
+
+/* Packages Section  */
+.packages{
+    display: flex;
+}
+.p1{
+    background-color: #fff;
+    margin: 40px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .3s;
+}
+.packages .p1{
+    height: 85vh;
+}
+.p1:hover{
+    background-color: black;
+    color: white;
+}
+.p1 img{
+    width: 100%;
+}
+.p1 h3{
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 22px;
+}
+.p1 h3 i{
+    font-size: 25px;
+    padding-right: 5px;
+    color: darkorange;
+}
+.p1 p,.icon,h4{
+    padding: 5px 20px
+}
+.icon i{
+    color: darkorange;
+    font-size: 20px;
+}
+.p1 h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.p1 h4 span{
+    font-size: 15px;
+    padding-left: 10px;
+    text-decoration: line-through;
+}
+.p1 .btn{
+    margin-left: 20px;
+}
+
+/* Services Section  */
+.services{
+    display: flex;
+}
+.services .p1{
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.services .p1 i{
+    font-size: 35px;
+    padding-bottom: 30px;
+    color: darkorange;
+}
+.services .p1 p{
+    padding-top: 20px;
+}
+
+/* Gallery Section  */
+.gallery{
+    display: flex;
+}
+.g1{
+    position: relative;
+}
+.g1 img{
+    width: 90%;
+    margin: 30px 20px;
+    display: block;
+}
+.head{
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 0;
+    margin: 30px 20px;
+    overflow: hidden;
+    transition: .5s ease;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.head h1{
+    padding-top: 30px;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+
+.head p{
+    max-width: 80%;
+    font-weight: bold;
+    padding: 5px 40px;
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+.g1:hover .head{
+    bottom: 0;
+    height: 82%;
+}
+
+/* Review Section  */
+.review{
+    display: flex;
+    text-align: center;
+}
+.review .p1 img{
+    margin: 30px 0;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+}
+.review .p1 h1{
+    font-size: 30px;
+}
+.review .p1 p{
+    font-size: 16px;
+}
+.review .icon{
+    padding: 20px 0;
+}
+
+/* Footer Section  */
+
+.footer{
+    display: flex;
+    background-color: black;
+    padding-top: 5%;
+}
+.d1{
+    padding: 80px 30px;
+    margin-left: 40px;
+
+}
+.d1 h1 span{
+    color: darkorange;
+}
+.d1 p{
+    padding: 30px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
+    font-size: 15px;
+    color: rgb(185, 179, 179);
+}
+.d1 .icons i{
+    color: white;
+    font-size: 40px;
+}
+.d1 .icons i:hover{
+    color: darkorange;
+}
+.d1 h1{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.d1 a{
+    display: flex;
+    line-height: 1.8;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+.d1 a:hover{
+    color: darkorange;
+    transition: .5s;
+}
+.copyright{
+    text-align: center;
+    padding: 40px 0;
+    border-top: 2px solid white;
+    height: 20px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.copyright h1{
+   font-size: 22px;
+   color: white;
+}
+
+
+
+
